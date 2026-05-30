@@ -125,7 +125,7 @@ export function ProjectForm() {
               </Label>
               <Select
                 value={formData.category}
-                onValueChange={(value) => setFormData({ ...formData, category: value })}
+                onValueChange={(value) => setFormData({ ...formData, category: value || "" })}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Selecciona una categoría" />
@@ -146,7 +146,7 @@ export function ProjectForm() {
               </Label>
               <Select
                 value={formData.priority}
-                onValueChange={(value) => setFormData({ ...formData, priority: value })}
+                onValueChange={(value) => setFormData({ ...formData, priority: value || "" })}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Selecciona la prioridad" />
@@ -164,7 +164,7 @@ export function ProjectForm() {
               <Label htmlFor="teamMember">Asignar Miembro (Opcional)</Label>
               <Select
                 value={formData.teamMember}
-                onValueChange={(value) => setFormData({ ...formData, teamMember: value })}
+                onValueChange={(value) => setFormData({ ...formData, teamMember: value || "" })}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Selecciona un miembro inicial" />
